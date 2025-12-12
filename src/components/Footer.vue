@@ -104,5 +104,6 @@ const navLinks = [
   { label: 'Kategori', to: '/kategori' },
   { label: 'Tentang Kami', to: '/tentang' },
   { label: 'Kontak', to: '/kontak' },
+  { label: 'About Me', to: '/About' },
 ]
 </script>

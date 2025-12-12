@@ -81,6 +81,7 @@ const navLinks = [
   { path: '/kategori', label: 'Kategori' },
   { path: '/tentang', label: 'Tentang Kami' },
   { path: '/kontak', label: 'Kontak' },
+  { path: '/About', label: 'About Me'}
 ]
 
 const isActive = (path: string) => route.path === path
