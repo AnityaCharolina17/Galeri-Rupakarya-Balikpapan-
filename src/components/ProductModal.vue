@@ -22,7 +22,7 @@
           <X class="w-5 h-5 text-slate-600" />
         </button>
 
-        <!-- Layout isi -->
+        <!-- Layout -->
         <div class="grid md:grid-cols-[1.2fr_1fr] gap-6 p-6">
           <!-- Gambar -->
           <div class="aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
@@ -84,11 +84,13 @@
               >
                 Tutup
               </button>
-              <button
+              <a
+                :href="`https://wa.me/6281263514671?text=Halo,%20saya%20ingin%20bertanya%20tentang%20produk%20${product.name}`"
+                target="_blank"
                 class="px-6 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
               >
                 Hubungi Penjual
-              </button>
+            </a>
             </div>
           </div>
         </div>

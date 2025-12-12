@@ -7,6 +7,7 @@
       :showSearch="true"
       :showCta="false"
       backgroundImage="/hero-bg.jpg"
+      @search="onSearch"
     />
 
     <section class="py-24 bg-white">
@@ -24,7 +25,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard
-            v-for="product in products"
+            v-for="product in filteredProducts"
             :key="product.id"
             v-bind="product"
             :onViewDetails="() => openModal(product)"
@@ -43,11 +44,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, computed } from "vue"
+import { useRoute } from 'vue-router'
 import Hero from "../components/Hero.vue"
 import ProductCard from "../components/ProductCard.vue"
 import ProductModal from "../components/ProductModal.vue"
 import { products } from "../data/products"
+
+const route = useRoute()
+const q = computed(() => String(route.query.q || '').trim())
+
+const filteredProducts = computed(() => {
+  if (!q.value) return products
+  const queryLower = q.value.toLowerCase()
+  return products.filter(p => {
+    return (
+      String(p.name || '').toLowerCase().includes(queryLower) ||
+      String(p.category || '').toLowerCase().includes(queryLower) ||
+      String(p.umkm || '').toLowerCase().includes(queryLower) ||
+      String(p.description || '').toLowerCase().includes(queryLower)
+    )
+  })
+})
 
 const isModalOpen = ref(false)
 const selectedProduct = ref(null)
@@ -55,5 +73,10 @@ const selectedProduct = ref(null)
 const openModal = (product: any) => {
   selectedProduct.value = product
   isModalOpen.value = true
+}
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const onSearch = (query: string) => {
+  router.push({ path: '/produk', query: { q: query } })
 }
 </script>

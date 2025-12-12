@@ -5,12 +5,12 @@
       subtitle="Platform digital yang menghubungkan produk-produk unggulan UMKM Balikpapan dengan pasar yang lebih luas di seluruh Indonesia."
       :showSearch="true"
       :showCta="true"
+      @search="onSearch"
     />
 
     <!-- TODO: StatsSection.vue kalau mau dikonversi juga -->
     <!-- <StatsSection /> -->
 
-    <!-- Value propositions → boleh langsung copas struktur dari Home.tsx -->
     <!-- Featured products -->
     <section class="py-24 bg-gradient-to-b from-slate-50 to-white">
       <div class="container mx-auto px-4">
@@ -55,20 +55,19 @@
       </div>
     </section>
 
-    <!-- TODO: ProductModal.vue bisa dikonversi serupa -->
-    <!--
+    <!-- Modal Product -->
     <ProductModal
       :product="selectedProduct"
       :isOpen="isModalOpen"
       @close="isModalOpen = false"
     />
-    -->
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { ArrowRight } from 'lucide-vue-next'
 import Hero from '../components/Hero.vue'
 import ProductCard from '../components/ProductCard.vue'
@@ -84,5 +83,12 @@ const featuredProducts = computed(() => products.slice(0, 3))
 const openModal = (product: (typeof products)[0]) => {
   selectedProduct.value = product
   isModalOpen.value = true
+}
+
+const router = useRouter()
+
+const onSearch = (query: string) => {
+  // navigate to produk page with query param
+  router.push({ path: '/produk', query: { q: query } })
 }
 </script>

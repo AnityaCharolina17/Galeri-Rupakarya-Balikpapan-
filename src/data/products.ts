@@ -1,3 +1,6 @@
+// This will be populated later after products are defined
+const __imageMap: Record<string, string> = {}
+
 export const products = [
   // KERAJINAN (15 produk)
   {
@@ -564,313 +567,85 @@ export const products = [
       address: 'Jl. Gatot Subroto No. 23, Balikpapan Selatan',
     },
   },
-
-  // MINUMAN (8 produk)
-  {
-    id: '4',
-    name: 'Kopi Arabika Premium',
-    category: 'Minuman',
-    price: 'Rp 95.000',
-    image: 'https://images.unsplash.com/photo-1652248939452-6de84124f8a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFucyUyMHJvYXN0ZWR8ZW58MXx8fHwxNzYwNTAzNDkwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    umkm: 'Kopi Nusantara',
-    description: 'Biji kopi arabika pilihan dari perkebunan lokal Kalimantan. Di-roast dengan sempurna untuk menghasilkan cita rasa yang khas dan aroma yang menggugah selera.',
-    contact: {
-      phone: '+62 815 6789 0123',
-      email: 'kopinusantara@gmail.com',
-      address: 'Jl. Marsma R. Iswahyudi No. 22, Balikpapan Barat',
-    },
-  },
-  {
-    id: '44',
-    name: 'Teh Herbal Tradisional',
-    category: 'Minuman',
-    price: 'Rp 65.000',
-    image: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Teh Heritage',
-    description: 'Teh herbal dari bahan alami pilihan. Menyegarkan dan menyehatkan.',
-    contact: {
-      phone: '+62 855 9012 3456',
-      email: 'tehheritage@gmail.com',
-      address: 'Jl. MT Haryono No. 34, Balikpapan Timur',
-    },
-  },
-  {
-    id: '45',
-    name: 'Sirup Buah Naga Asli',
-    category: 'Minuman',
-    price: 'Rp 45.000',
-    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Sirup Segar',
-    description: 'Sirup dari buah naga asli tanpa pewarna buatan. Segar dan sehat.',
-    contact: {
-      phone: '+62 856 0123 4567',
-      email: 'sirupsegar@gmail.com',
-      address: 'Jl. Letjen Suprapto No. 45, Balikpapan Barat',
-    },
-  },
-  {
-    id: '46',
-    name: 'Wedang Jahe Instan',
-    category: 'Minuman',
-    price: 'Rp 35.000',
-    image: 'https://images.unsplash.com/photo-1587080266227-677cc2a4e76e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Wedang Hangat',
-    description: 'Wedang jahe instan praktis. Hangat dan berkhasiat untuk kesehatan.',
-    contact: {
-      phone: '+62 857 1234 5678',
-      email: 'wedanghangat@gmail.com',
-      address: 'Jl. Ahmad Yani No. 67, Balikpapan Tengah',
-    },
-  },
-  {
-    id: '47',
-    name: 'Kopi Robusta Gayo',
-    category: 'Minuman',
-    price: 'Rp 85.000',
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Kopi Gayo Premium',
-    description: 'Kopi robusta dari dataran tinggi Gayo. Rasa kuat dan nikmat.',
-    contact: {
-      phone: '+62 858 2345 6789',
-      email: 'kopigayo@gmail.com',
-      address: 'Jl. Soekarno Hatta No. 78, Balikpapan Utara',
-    },
-  },
-  {
-    id: '48',
-    name: 'Susu Kedelai Organik',
-    category: 'Minuman',
-    price: 'Rp 25.000',
-    image: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Susu Sehat',
-    description: 'Susu kedelai dari kedelai organik pilihan. Bergizi dan lezat.',
-    contact: {
-      phone: '+62 859 3456 7890',
-      email: 'sususehat@gmail.com',
-      address: 'Jl. Yos Sudarso No. 90, Balikpapan Selatan',
-    },
-  },
-  {
-    id: '49',
-    name: 'Minuman Kunyit Asam',
-    category: 'Minuman',
-    price: 'Rp 30.000',
-    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Jamu Tradisi',
-    description: 'Minuman kunyit asam tradisional. Menyegarkan dan berkhasiat.',
-    contact: {
-      phone: '+62 860 4567 8901',
-      email: 'jamutradisi@gmail.com',
-      address: 'Jl. Jenderal Sudirman No. 12, Balikpapan Timur',
-    },
-  },
-  {
-    id: '50',
-    name: 'Jus Mangga Asli',
-    category: 'Minuman',
-    price: 'Rp 40.000',
-    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Jus Fresh',
-    description: 'Jus mangga dari buah mangga segar pilihan. Tanpa gula tambahan.',
-    contact: {
-      phone: '+62 861 5678 9012',
-      email: 'jusfresh@gmail.com',
-      address: 'Jl. Gatot Subroto No. 34, Balikpapan Barat',
-    },
-  },
-
-  // FURNITURE (7 produk)
-  {
-    id: '5',
-    name: 'Mebel Kayu Jati',
-    category: 'Furniture',
-    price: 'Rp 3.500.000',
-    image: 'https://images.unsplash.com/photo-1759424909795-2581494c1a41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBjcmFmdHMlMjBmdXJuaXR1cmV8ZW58MXx8fHwxNzYwNjAyNjk0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    umkm: 'Furniture Jaya',
-    description: 'Mebel berkualitas dari kayu jati pilihan. Dikerjakan oleh pengrajin berpengalaman dengan finishing berkualitas tinggi. Desain minimalis modern yang elegan.',
-    contact: {
-      phone: '+62 816 7890 1234',
-      email: 'furniturejaya@gmail.com',
-      address: 'Jl. Soekarno Hatta No. 156, Balikpapan Timur',
-    },
-  },
-  {
-    id: '51',
-    name: 'Kursi Makan Kayu Minimalis',
-    category: 'Furniture',
-    price: 'Rp 850.000',
-    image: 'https://images.unsplash.com/photo-1503602642458-232111445657?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Kursi Premium',
-    description: 'Kursi makan dari kayu solid dengan desain minimalis modern.',
-    contact: {
-      phone: '+62 862 6789 0123',
-      email: 'kursipremium@gmail.com',
-      address: 'Jl. MT Haryono No. 56, Balikpapan Tengah',
-    },
-  },
-  {
-    id: '52',
-    name: 'Lemari Pakaian Jati',
-    category: 'Furniture',
-    price: 'Rp 5.250.000',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Lemari Klasik',
-    description: 'Lemari pakaian dari kayu jati dengan ukiran klasik. Kapasitas besar.',
-    contact: {
-      phone: '+62 863 7890 1234',
-      email: 'lemariiklasik@gmail.com',
-      address: 'Jl. Letjen Suprapto No. 67, Balikpapan Utara',
-    },
-  },
-  {
-    id: '53',
-    name: 'Meja Belajar Anak',
-    category: 'Furniture',
-    price: 'Rp 1.250.000',
-    image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Meja Anak Ceria',
-    description: 'Meja belajar untuk anak dengan desain ceria dan warna menarik.',
-    contact: {
-      phone: '+62 864 8901 2345',
-      email: 'mejaanakceria@gmail.com',
-      address: 'Jl. Ahmad Yani No. 78, Balikpapan Selatan',
-    },
-  },
-  {
-    id: '54',
-    name: 'Rak Buku Minimalis',
-    category: 'Furniture',
-    price: 'Rp 1.850.000',
-    image: 'https://images.unsplash.com/photo-1594620302200-9a762244a156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Rak Modern',
-    description: 'Rak buku dengan desain minimalis. Cocok untuk ruang keluarga dan kantor.',
-    contact: {
-      phone: '+62 865 9012 3456',
-      email: 'rakmodern@gmail.com',
-      address: 'Jl. Soekarno Hatta No. 90, Balikpapan Timur',
-    },
-  },
-  {
-    id: '55',
-    name: 'Sofa Retro 3 Dudukan',
-    category: 'Furniture',
-    price: 'Rp 4.500.000',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Sofa Nyaman',
-    description: 'Sofa dengan desain retro dan busa empuk. Nyaman untuk bersantai.',
-    contact: {
-      phone: '+62 866 0123 4567',
-      email: 'sofanyaman@gmail.com',
-      address: 'Jl. Yos Sudarso No. 12, Balikpapan Barat',
-    },
-  },
-  {
-    id: '56',
-    name: 'Nakas Kayu Jati',
-    category: 'Furniture',
-    price: 'Rp 975.000',
-    image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Nakas Elegan',
-    description: 'Nakas dari kayu jati dengan laci praktis. Cocok untuk kamar tidur.',
-    contact: {
-      phone: '+62 867 1234 5678',
-      email: 'nakaselegan@gmail.com',
-      address: 'Jl. Jenderal Sudirman No. 23, Balikpapan Tengah',
-    },
-  },
-
-  // KESEHATAN (6 produk)
-  {
-    id: '6',
-    name: 'Jamu Herbal Tradisional',
-    category: 'Kesehatan',
-    price: 'Rp 45.000',
-    image: 'https://images.unsplash.com/photo-1758534272283-bbbeacf06b2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZXJiYWwlMjBwcm9kdWN0cyUyMG5hdHVyYWx8ZW58MXx8fHwxNzYwNjAyNjk0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    umkm: 'Herbal Sehat Alami',
-    description: 'Jamu herbal dengan resep tradisional dari bahan-bahan alami pilihan. Telah tersertifikasi BPOM dan halal. Membantu menjaga kesehatan dan stamina tubuh.',
-    contact: {
-      phone: '+62 817 8901 2345',
-      email: 'herbalsehat@gmail.com',
-      address: 'Jl. Gatot Subroto No. 34, Balikpapan Kota',
-    },
-  },
-  {
-    id: '57',
-    name: 'Minyak Kayu Putih Asli',
-    category: 'Kesehatan',
-    price: 'Rp 35.000',
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Minyak Sehat',
-    description: 'Minyak kayu putih murni dari destilasi tradisional. Untuk kesehatan keluarga.',
-    contact: {
-      phone: '+62 868 2345 6789',
-      email: 'minyaksehat@gmail.com',
-      address: 'Jl. MT Haryono No. 45, Balikpapan Utara',
-    },
-  },
-  {
-    id: '58',
-    name: 'Kapsul Habbatussauda',
-    category: 'Kesehatan',
-    price: 'Rp 75.000',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Herbal Premium',
-    description: 'Kapsul habbatussauda berkualitas tinggi. Bersertifikat halal dan BPOM.',
-    contact: {
-      phone: '+62 869 3456 7890',
-      email: 'herbalpremium@gmail.com',
-      address: 'Jl. Letjen Suprapto No. 56, Balikpapan Selatan',
-    },
-  },
-  {
-    id: '59',
-    name: 'Sabun Herbal Alami',
-    category: 'Kesehatan',
-    price: 'Rp 25.000',
-    image: 'https://images.unsplash.com/photo-1588864721034-4afdb05a5799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Sabun Natural',
-    description: 'Sabun handmade dari bahan herbal alami. Aman untuk kulit sensitif.',
-    contact: {
-      phone: '+62 870 4567 8901',
-      email: 'sabunnatural@gmail.com',
-      address: 'Jl. Soekarno Hatta No. 67, Balikpapan Timur',
-    },
-  },
-  {
-    id: '60',
-    name: 'Madu Hutan Asli',
-    category: 'Kesehatan',
-    price: 'Rp 125.000',
-    image: 'https://images.unsplash.com/photo-1587049352846-4a222e784910?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Madu Murni',
-    description: 'Madu hutan murni dari Kalimantan. Kaya manfaat untuk kesehatan.',
-    contact: {
-      phone: '+62 871 5678 9012',
-      email: 'madumurni@gmail.com',
-      address: 'Jl. Ahmad Yani No. 89, Balikpapan Barat',
-    },
-  },
-  {
-    id: '61',
-    name: 'Teh Daun Sirsak Kering',
-    category: 'Kesehatan',
-    price: 'Rp 40.000',
-    image: 'https://images.unsplash.com/photo-1563822249548-9a72b6d4e1f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080',
-    umkm: 'Teh Sehat',
-    description: 'Daun sirsak kering untuk seduhan teh herbal. Berkhasiat untuk kesehatan.',
-    contact: {
-      phone: '+62 872 6789 0123',
-      email: 'tehsehat@gmail.com',
-      address: 'Jl. Yos Sudarso No. 23, Balikpapan Tengah',
-    },
-  },
 ];
 
 export const categories = [
   { name: 'Kerajinan', count: 15 },
   { name: 'Makanan', count: 14 },
   { name: 'Fashion', count: 10 },
-  { name: 'Minuman', count: 8 },
-  { name: 'Furniture', count: 7 },
-  { name: 'Kesehatan', count: 6 },
 ];
+
+
+    try {
+      const modules = import.meta.glob('../assets/products/**/*.{png,jpg,jpeg,webp,svg}', {
+      eager: true,
+      import: 'default'
+    }) as Record<string, unknown>;
+
+    const normalize = (s: string) =>
+      String(s)
+        .toLowerCase()
+        .normalize('NFKD')
+        .replace(/\p{Diacritic}/gu, '')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    for (const path in modules) {
+      const url = modules[path];
+      if (typeof url !== "string") continue;
+
+      const filename = path.split('/').pop() || '';
+      const nameNoExt = filename.replace(/\.[^.]+$/, '');
+      const key = normalize(nameNoExt);
+
+      if (key) __imageMap[key] = url;
+    }
+
+
+    // Assign local images by matching normalized product name, fallback to id
+    console.log("Image map keys:", Object.keys(__imageMap));
+
+    products.forEach(p => {
+      const byName = normalize(p.name)
+      if (byName && __imageMap[byName]) {
+        p.image = __imageMap[byName]
+        return
+      }
+
+      // fallback: try id as filename without extension
+      const idKey = normalize(String(p.id))
+      if (idKey && __imageMap[idKey]) {
+        p.image = __imageMap[idKey]
+        return
+      }
+
+      // no further fallback; keep remote URL if no local image found
+    })
+
+    // Development-only report: which products were matched vs not
+    // Development-only report: which products were matched vs not
+    try {
+      const dev = (import.meta as any).env && (import.meta as any).env.DEV
+      if (dev) {
+        const matched: string[] = []
+        const unmatched: string[] = []
+        products.forEach(p => {
+          const current = p.image || ''
+          const isLocal = Object.values(__imageMap).includes(current)
+          if (isLocal) matched.push(p.name)
+          else unmatched.push(p.name)
+        })
+        console.groupCollapsed && console.groupCollapsed('Product image mapping report')
+        console.info(`Local images found: ${matched.length}, Using remote/fallback: ${unmatched.length}`)
+        if (matched.length > 0) console.info('Matched:', matched.slice(0, 30))
+        if (unmatched.length > 0) console.info('Unmatched:', unmatched.slice(0, 30))
+        console.groupEnd && console.groupEnd()
+      }
+    } catch (e) {
+      // ignore logging errors
+    }
+  }
+catch (e) {
+  // ignore - app will use remote URLs as defined in products
+}

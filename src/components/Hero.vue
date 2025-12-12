@@ -1,6 +1,6 @@
 <template>
   <div class="relative bg-slate-900 text-white overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
-    <!-- background optional -->
+    <!-- background -->
     <div v-if="backgroundImage" class="absolute inset-0">
       <img :src="backgroundImage" alt="Hero background" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/70" />
@@ -19,11 +19,14 @@
         <div v-if="showSearch" class="max-w-2xl mb-8">
           <div class="relative">
             <input
+              v-model="query"
+              @keyup.enter="onSearch"
               type="text"
               placeholder="Cari produk UMKM Balikpapan..."
               class="w-full px-6 py-5 pr-14 rounded-xl text-slate-900 bg-white shadow-2xl focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button
+              @click="onSearch"
               class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center hover:bg-slate-800"
             >
               <Search class="w-5 h-5" />
@@ -58,6 +61,7 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
 import { Search, ArrowRight } from 'lucide-vue-next'
 
 interface Props {
@@ -68,6 +72,17 @@ interface Props {
   showCta?: boolean
 }
 
+const emit = defineEmits<{
+  (e: 'search', query: string): void
+}>()
+
 const props = defineProps<Props>()
 const { title, subtitle, showSearch = false, backgroundImage, showCta = false } = props
+
+const query = ref('')
+
+const onSearch = () => {
+  if ((query.value || '').trim().length === 0) return
+  emit('search', query.value.trim())
+}
 </script>
