@@ -119,7 +119,7 @@ interface Product {
   contact: Contact;
 }
 
-const props = defineProps<{
+defineProps<{
   product: Product | null;
   isOpen: boolean;
 }>();

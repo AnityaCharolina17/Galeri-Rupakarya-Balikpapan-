@@ -38,5 +38,5 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const { id, name, category, price, image, umkm, onViewDetails } = props
+const { name, category, price, image, umkm, onViewDetails } = props
 </script>

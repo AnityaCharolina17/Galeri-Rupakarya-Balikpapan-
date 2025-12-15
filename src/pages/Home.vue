@@ -72,7 +72,6 @@ import { ArrowRight } from 'lucide-vue-next'
 import Hero from '../components/Hero.vue'
 import ProductCard from '../components/ProductCard.vue'
 import { products } from '../data/products'
-import StatsSection from '../components/StatsSection.vue'
 import ProductModal from '../components/ProductModal.vue'
 
 const isModalOpen = ref(false)
